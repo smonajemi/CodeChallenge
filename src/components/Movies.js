@@ -10,7 +10,7 @@ const Movies = (props) =>
     <Container>
         <Row> 
             <Col>
-                <Card style={{ width: '22rem'}}>
+                <Card style={{ width: '20rem'}}>
                     <Card.Img variant="top" src={ImgApi + props.poster_path} alt={props.title} className='cardImage'/>
                     <div class="overlay">
                         <div class="text">{props.title}</div>
