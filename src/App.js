@@ -3,11 +3,12 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavBar from './components/Nav';
 import Movies from './components/Movies';
 
-const api = `https://api.themoviedb.org/3/movie/popular?api_key=dc4b7ad6e4b986a9636b0bef75dbd914&language=en-US&page=1`;
+const api = `https://api.themoviedb.org/3/movie/popular?api_key=d0f5f2e135336200362af8a1a73acb17&language=en-US&page=1`;
+
 function App() {
   const [movies, setData] = useState([]);
   const [favoriteMovies, setFavorites] = useState([]);
-
+  
   useEffect(() => {
     fetch(api)
       .then(res => res.json())
