@@ -19,5 +19,4 @@ function FetchNav (){
       </div>
     )
 }
-
 export default FetchNav
