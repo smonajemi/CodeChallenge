@@ -35,7 +35,7 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <div className='headerText'>          
-              <h1>Select your favorit movie</h1>
+              <h1>Select your favorit movies</h1>
             </div>
             <div className='moviecontainer'>
               {movies.length > 0 && movies.map(movie => (
@@ -44,7 +44,7 @@ function App() {
             </div>
           </Route>
           <Route exact path='/liked'>
-            <div className='headerText'><h1>Select your favorit movie</h1></div>
+            <div className='headerText'><h1>View your favorit movies</h1></div>
             <div className='moviecontainer'>
               {favoriteMovies.length > 0 && favoriteMovies.map(movie => (
                 <Movies key={movie.id} {...movie} clickOnHandle={() => removeFromList(movie)} />
