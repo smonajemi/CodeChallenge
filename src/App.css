@@ -1,4 +1,6 @@
-body {}
+body {
+    background-color: rgb(14, 14, 14);
+}
 
 .App {
     text-align: center;
@@ -14,6 +16,8 @@ body {}
     margin-bottom: 100px;
     font-weight: 600px;
     color: #F95916;
+    text-transform: uppercase;
+
 }
 
 .moviecontainer {
