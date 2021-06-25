@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Card, Button, Container,Row,Col,Grid} from 'react-bootstrap';
-import '../App.css';
+import {Card, Container,Row,Col} from 'react-bootstrap';
 import '../lib/font-awesome/css/all.min.css';
+import '../App.css';
 const API = 'https://image.tmdb.org/t/p/w500';
-const Movies = ({poster_path, title,overview}) =>
+const Movies = ({poster_path, title,overview,vote_count}) =>
 <div className="movie">
     <Container>
         <Row> 
-            <Col size='10'>
+            <Col>
                 <Card style={{ width: '20rem'}}>
-                    <Card.Img variant="top" src={API + poster_path} alt={title} class='cardImage'/>
-                    <Card.Body>
-                        <Card.Title class='cardTitle' >{title}</Card.Title>
-                        {/* <Card.Text>{overview}</Card.Text> */}
-                    </Card.Body>
-                    <Card.Footer>
-                        <Button variant="primary"><i class="fas fa-thumbs-up"></i></Button>
+                    <Card.Img variant="top" src={API + poster_path} alt={title} className='cardImage'/>
+                    <Card.Footer className="cardFooter">
+                        <Row>
+                            <Col>
+                                <i className="fas fa-thumbs-up like"></i>
+                            </Col>
+                            <Col>
+                                <i className="fas fa-eye">  {vote_count}</i>
+                            </Col>
+                        </Row>                     
                     </Card.Footer>
                 </Card>
             </Col>
