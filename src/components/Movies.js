@@ -14,7 +14,7 @@ const Movies = (props) =>
                     <Card.Footer className="cardFooter">
                         <Row>
                             <Col>
-                                <i className="fas fa-thumbs-up like" onClick={() => props.clickOnHandle()}></i>
+                                <i className={`fas fa-thumbs-up ${props.isLiked ? 'liked' : ''}`} onClick={() => props.clickOnHandle()}></i>
                             </Col>
                             <Col>
                                 <i className="fas fa-eye">  {props.vote_count}</i>

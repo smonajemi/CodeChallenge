@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {BrowserRouter, Route,Switch} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavBar from './components/Nav';
 import Movies from './components/Movies';
 
@@ -9,17 +9,22 @@ function App() {
   const [favoriteMovies, setFavorites] = useState([]);
 
   useEffect(() => {
-    fetch(api)        
-    .then(res => res.json())
-    .then(data =>
-        {
-          console.log(data.results);
-          setData(data.results);
-        });        
-  },[])
+    fetch(api)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data.results);
+        setData(data.results);
+      });
+  }, [])
 
   const addTolist = (movie) => {
-    const newList = [...favoriteMovies,movie];
+    movie.isLiked = true;
+    const newList = [...favoriteMovies, movie];
+    setFavorites(newList);
+  }
+  const removeFromFavoriteList = movie => {
+    movie.isLiked = false;
+    const newList = favoriteMovies.filter(mv => mv.id !== movie.id);
     setFavorites(newList);
   }
   return (
@@ -29,22 +34,22 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <div className='headerText'><h1>Select your favorit movie</h1></div>
-          <div className='moviecontainer'>
-              {movies.length > 0 && movies.map(movie =>(
-                  <Movies key={movie.id} {...movie}/>
-                ))}
+            <div className='moviecontainer'>
+              {movies.length > 0 && movies.map(movie => (
+                <Movies key={movie.id} {...movie} clickOnHandle={() => addTolist(movie)} />
+              ))}
             </div>
           </Route>
           <Route exact path='/liked'>
-          <div className='headerText'><h1>Select your favorit movie</h1></div>
-          <div className='moviecontainer'>
-              {favoriteMovies.length > 0 && favoriteMovies.map(movie =>(
-                  <Movies key={movie.id} {...movie} clickOnHandle={addTolist}/>
-                ))}
+            <div className='headerText'><h1>Select your favorit movie</h1></div>
+            <div className='moviecontainer'>
+              {favoriteMovies.length > 0 && favoriteMovies.map(movie => (
+                <Movies key={movie.id} {...movie} clickOnHandle={() => removeFromFavoriteList(movie)} />
+              ))}
             </div>
           </Route>
         </Switch>
-      </BrowserRouter>        
+      </BrowserRouter>
     </div>
   );
 }
