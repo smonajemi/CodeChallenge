@@ -6,7 +6,7 @@ function FetchNav (){
     return (
         <div>
         <Navbar bg="dark" variant="dark"expand='lg' fixed="top">
-          <Navbar.Brand href="/" id='navBrand'>Sina Monajemi</Navbar.Brand>
+          <Navbar.Brand href="/" id='navBrand'>Sina</Navbar.Brand>
             <Navbar.Toggle aria-controls='basic-navbar-nav' />
               <Navbar.Collapse id='basic-navbar-nav'>
                 <Nav className='ml-auto'>
