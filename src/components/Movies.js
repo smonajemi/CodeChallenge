@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card, Button, Container,Row,Col,Grid} from 'react-bootstrap';
 import '../App.css';
+import '../lib/font-awesome/css/all.min.css';
 const API = 'https://image.tmdb.org/t/p/w500';
 const Movies = ({poster_path, title,overview}) =>
 <div className="movie">
@@ -15,7 +16,7 @@ const Movies = ({poster_path, title,overview}) =>
                         {/* <Card.Text>{overview}</Card.Text> */}
                     </Card.Body>
                 <Card.Footer>
-                    <Button variant="primary">Add to Favourits</Button>
+                    <Button variant="primary"><i class="fas fa-thumbs-up"></i></Button>
                 </Card.Footer>
                 </Card>
             </Col>
