@@ -6,11 +6,12 @@ function FetchNav (){
     return (
         <div>
         <Navbar bg="dark" variant="dark"expand='lg' fixed="top">
+          <Navbar.Brand href="/" id='navBrand'>Sina Monajemi</Navbar.Brand>
             <Navbar.Toggle aria-controls='basic-navbar-nav' />
               <Navbar.Collapse id='basic-navbar-nav'>
-                <Nav className='mr-auto'>
+                <Nav className='ml-auto'>
                   <Nav.Link  href='/' id='navLink'>Home</Nav.Link>
-                  <Nav.Link  href='/movies' id='navLink'>Movies</Nav.Link>
+                  <Nav.Link  href='/liked' id='navLink'>Liked Movies</Nav.Link>
                 </Nav>
               </Navbar.Collapse>
         </Navbar>

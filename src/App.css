@@ -1,34 +1,88 @@
+body {}
+
 .App {
-  text-align: center;
+    text-align: center;
 }
-.moviecontainer{
-  display: flex;
-  flex-wrap: wrap; 
-  margin-top: 45px;
-  margin-bottom: 25px;
+
+#navBrand {
+    color: #F95916;
+    font-weight: 1000px;
 }
-.movie{
-  overflow: hidden;
-  justify-content:center;
-  margin: 1rem auto;
-  float: none;
-  margin-bottom: 10px; 
+
+.headerText {
+    margin-top: 75px;
+    margin-bottom: 100px;
+    font-weight: 600px;
+    color: #F95916;
 }
-.cardTitle{
-  min-height: 50px;
-  max-height: 50px;
-  font-weight: bold;
+
+.moviecontainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    margin-bottom: 15px;
 }
-.cardImage{
-  min-height: 350px;
-  max-height: 350px;
+
+.movie {
+    overflow: hidden;
+    justify-content: center;
+    margin: 1rem auto;
+    float: none;
+    margin-bottom: 55px;
 }
-.cardFooter{
-  background-color: #F95916;
+
+.movie:hover {
+    transform: scale(1.2);
 }
-#navLink:hover{
-  color: #F95916;
+
+.cardTitle {
+    min-height: 50px;
+    max-height: 50px;
+    font-weight: bold;
 }
-.like{
-  cursor: pointer;
+
+.cardImage {
+    min-height: 350px;
+    max-height: 350px;
+}
+
+.cardFooter {
+    background-color: #F95916;
+}
+
+#navLink:hover {
+    color: #F95916;
+}
+
+.like {
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #F95916;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
