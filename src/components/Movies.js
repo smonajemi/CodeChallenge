@@ -3,21 +3,25 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card, Container,Row,Col} from 'react-bootstrap';
 import '../lib/font-awesome/css/all.min.css';
 import '../App.css';
-const API = 'https://image.tmdb.org/t/p/w500';
+
+const ImgApi = 'https://image.tmdb.org/t/p/w500';
 const Movies = (props) =>
 <div className="movie">
     <Container>
         <Row> 
             <Col>
-                <Card style={{ width: '20rem'}}>
-                    <Card.Img variant="top" src={API + props.poster_path} alt={props.title} className='cardImage'/>
+                <Card style={{ width: '30rem'}}>
+                    <Card.Img variant="top" src={ImgApi + props.poster_path} alt={props.title} className='cardImage'/>
+                    <div class="overlay">
+                        <div class="text">{props.title}</div>
+                    </div>
                     <Card.Footer className="cardFooter">
                         <Row>
                             <Col>
-                                <i className={`fas fa-thumbs-up ${props.isLiked ? 'liked' : ''}`} onClick={() => props.clickOnHandle()}></i>
+                                <i className={`fas fa-plus ${props.isLiked ? 'liked' : ''}`} onClick={() => props.clickOnHandle()} id='cursor'></i>
                             </Col>
                             <Col>
-                                <i className="fas fa-eye">  {props.vote_count}</i>
+                                <i className="fas fa-eye" id='colorStyle'>  {props.vote_count}</i>
                             </Col>
                         </Row>                     
                     </Card.Footer>
@@ -26,4 +30,5 @@ const Movies = (props) =>
         </Row>
     </Container>
 </div>
+
 export default Movies
