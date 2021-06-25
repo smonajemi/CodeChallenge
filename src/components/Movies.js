@@ -10,7 +10,7 @@ const Movies = (props) =>
     <Container>
         <Row> 
             <Col>
-                <Card style={{ width: '30rem'}}>
+                <Card style={{ width: '22rem'}}>
                     <Card.Img variant="top" src={ImgApi + props.poster_path} alt={props.title} className='cardImage'/>
                     <div class="overlay">
                         <div class="text">{props.title}</div>
@@ -21,7 +21,7 @@ const Movies = (props) =>
                                 <i className={`fas fa-plus ${props.isLiked ? 'liked' : ''}`} onClick={() => props.clickOnHandle()} id='cursor'></i>
                             </Col>
                             <Col>
-                                <i className="fas fa-eye" id='colorStyle'>  {props.vote_count}</i>
+                                <i className="fas fa-eye"><span id='iconPadding'>{props.vote_count}</span></i>
                             </Col>
                         </Row>                     
                     </Card.Footer>

@@ -7,7 +7,7 @@ body {
 }
 
 #navBrand {
-    color: #DE8971;
+    color: #046582;
     font-weight: 1000px;
 }
 
@@ -15,7 +15,7 @@ body {
     margin-top: 75px;
     margin-bottom: 70px;
     font-weight: 600px;
-    color: #DE8971;
+    color: #046582;
     text-transform: uppercase;
 }
 
@@ -49,11 +49,11 @@ body {
 
 
 .cardFooter {
-    background-color: #DE8971;
+    background-color: #046582;
 }
 
 #navLink:hover {
-    color: #DE8971;
+    color: #046582;
 }
 
 .like {
@@ -70,7 +70,7 @@ body {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: #DE8971;
+    background-color: #046582;
 }
 
 .container:hover .overlay {
@@ -96,12 +96,14 @@ body {
     text-decoration: none;
 }
 .liked{
-    color: rgb(59, 143, 4);
+    color: #fff;
 }
 #cursor{
     cursor: pointer;
-    color: #7B6079;
 }
-#colorStyle{
-    color: #7B6079;
+.fas{
+    font-size: 20px;
+}
+#iconPadding{
+    padding-left: 20px;
 }
