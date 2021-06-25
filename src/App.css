@@ -96,7 +96,7 @@ body {
     text-decoration: none;
 }
 .liked{
-    color: #fff;
+    color: red;
 }
 #cursor{
     cursor: pointer;

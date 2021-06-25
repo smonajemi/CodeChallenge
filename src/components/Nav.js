@@ -21,4 +21,4 @@ function FetchNav() {
     </div>
   )
 }
-export default FetchNav
+export default FetchNav;

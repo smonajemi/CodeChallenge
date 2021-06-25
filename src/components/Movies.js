@@ -31,4 +31,4 @@ const Movies = (props) =>
     </Container>
 </div>
 
-export default Movies
+export default Movies;
