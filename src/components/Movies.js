@@ -7,7 +7,7 @@ const API = 'https://image.tmdb.org/t/p/w500';
 const Movies = ({poster_path, title,overview}) =>
 <div className="movie">
     <Container>
-        <Row>
+        <Row> 
             <Col size='10'>
                 <Card style={{ width: '20rem'}}>
                     <Card.Img variant="top" src={API + poster_path} alt={title}/>

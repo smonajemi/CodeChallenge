@@ -4,7 +4,6 @@ import FetchNav from './components/Nav';
 import FetchMovies from './components/Movies';
 import './App.css';
 const api = `https://api.themoviedb.org/3/movie/popular?api_key=dc4b7ad6e4b986a9636b0bef75dbd914&language=en-US&page=1`;
-
 function App() {
   const [movies, setData] = useState([]);
   useEffect(() => {
@@ -22,14 +21,14 @@ function App() {
         <FetchNav />
         <Switch>
           <Route exact path='/'>
-            <p>HOME PAGE</p>
-          </Route>
-          <Route exact path='/movies'>
-            <div className='moviecontainer'>
+          <div className='moviecontainer'>
               {movies.length > 0 && movies.map(movie =>(
                   <FetchMovies key={movie.id} {...movie}/>
                 ))}
             </div>
+          </Route>
+          <Route exact path='/movies'>
+           <p>LIKED MOVIES</p>
           </Route>
         </Switch>
       </BrowserRouter>        
